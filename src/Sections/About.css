@@ -55,37 +55,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
   }
   
-  
-
-  /* Modern Heading Style */
-.section-title {
-    font-size: 3rem; /* Larger font size for modern look */
-    font-weight: 700; /* Bold weight */
-    text-transform: uppercase; /* All caps for boldness */
-    letter-spacing: 3px; /* Adds spacing for elegance */
-    color: transparent; /* Required for gradient text */
-    background: linear-gradient(90deg, #00ffff, #00e0e0); /* Gradient cyan */
-    -webkit-background-clip: text; /* Clips gradient to text */
-    background-clip: text; /* Standard property for non-WebKit browsers */
-    margin-bottom: 2rem;
-    text-align: center;
-    position: relative;
-  }
-  
-  /* Optional: Add Shadow for Depth */
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px; /* Line width under heading */
-    height: 4px; /* Line thickness */
-    background: #00ffff; /* Accent color */
-    border-radius: 4px; /* Rounded edges */
-  }
-  
-  
+ 
   /* Add keyframes for the image */
   @keyframes zoomIn {
     from {

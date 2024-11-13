@@ -1,36 +1,47 @@
 .navbar {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    z-index: 10;
-  
-    /* Frosted glass effect */
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-item {
-    margin: 0 1.5rem;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem; /* Padding to make it look like a button */
-    border-radius: 5px; /* Slightly rounded edges for button appearance */
-    transition: all 0.3s ease; /* Smooth transition effect */
-  }
-  
-  .nav-item:hover {
-    transform: scale(1.2); /* Optional: Increase zoom for more pronounced effect */
-    background: rgba(255, 255, 255, 0.2); /* Button-like background on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional: Stronger shadow for depth */
-    color: #00ffff; /* Cyan */
-    border: 1px solid #00ffff;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 10;
+  box-sizing: border-box;
 
+  /* Frosted glass effect */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  /* Animation for dropdown */
+  transform: translateY(-100px); /* Initially hidden above */
+  animation: slideDown 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0); /* End at the original position */
   }
-  
+}
+
+.nav-item {
+  margin: 0 1.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Padding to make it look like a button */
+  border-radius: 5px; /* Slightly rounded edges for button appearance */
+  transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensures border is included in the size */
+  border: 1px solid transparent; /* Add a transparent border to prevent layout shifting */
+}
+
+.nav-item:hover {
+  transform: scale(1.2); /* Optional: Increase zoom for more pronounced effect */
+  background: rgba(255, 255, 255, 0.2); /* Button-like background on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional: Stronger shadow for depth */
+  color: #00ffff; /* Cyan */
+  border: 1px solid #00ffff; /* Visible border */
+}

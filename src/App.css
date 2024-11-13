@@ -3,6 +3,8 @@ html, body, .App {
   margin: 0;
   background: linear-gradient(135deg, #121212, #323232); /* Soft black to charcoal gradient */
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 
@@ -16,13 +18,10 @@ html, body, .App {
   text-align: center;
   color: white;
   padding: 4rem;
-  background: linear-gradient(135deg, #121212, #323232);
-;
-;
+  background: none;
   /* Black-to-dark gray gradient */
 }
 
-/* Custom Scrollbar */
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: var(--scrollbar-width, 4px); /* Use variable for dynamic size */

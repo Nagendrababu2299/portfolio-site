@@ -1,0 +1,151 @@
+/* Horizontal Section Divider */
+.section-divider {
+    max-width: 1200px; /* Match the maximum width of your container */
+    height: 1px; /* Thin line */
+    margin: 2rem auto; /* Centered and spaced */
+    background: rgba(0, 255, 255, 0.5); /* Cyan with slight transparency */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Optional subtle glow */
+  }
+  
+  @media (max-width: 768px) {
+    .section-divider {
+      max-width: 80%; /* Adjust width for smaller screens */
+    }
+  }
+  
+  
+.resume-section {
+    padding: 4rem 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .resume-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .resume-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .resume-item {
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .resume-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00ffff;
+  }
+  
+  .resume-item .company,
+  .resume-item .dates {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+  }
+  
+  .resume-item .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+  
+  .section-title_1 {
+    font-size: 1.5rem; /* Larger font size for modern look */
+    font-weight: 700; /* Bold weight */
+    text-transform: uppercase; /* All caps for boldness */
+    letter-spacing: 3px; /* Adds spacing for elegance */
+    color: transparent; /* Required for gradient text */
+    background: linear-gradient(90deg, #00ffff, #00e0e0); /* Gradient cyan */
+    -webkit-background-clip: text; /* Clips gradient to text */
+    background-clip: text; /* Standard property for non-WebKit browsers */
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .skills-section {
+    padding: 4rem 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #00ffff; /* Matches the theme color */
+  }
+  
+  .skill-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .resume-download {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+    background: linear-gradient(90deg, #00ffff, #00e0e0); /* Matches the theme */
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3); /* Subtle glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5); /* Brighter glow on hover */
+  }
+  
+  .download-icon {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem; /* Space between icon and text */
+    font-size: 1.5rem; /* Adjust icon size */
+}
+
+  

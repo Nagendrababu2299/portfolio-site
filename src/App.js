@@ -2,7 +2,10 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import About from './Sections/About';
 import Projects from './Sections/Projects';
+import Resume from './Sections/Resume';
+import Contact from './Sections/Contact';
 import './App.css';
+
 import { useEffect } from 'react';
 
 function App() {
@@ -25,6 +28,8 @@ function App() {
       <Navbar />
       <About />
       <Projects />
+      <Resume />
+      < Contact />
     </div>
   );
 }
