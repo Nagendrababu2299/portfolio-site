@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from './components/Navbar';
+import About from './Sections/About';
+import Projects from './Sections/Projects';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    const handleScroll = () => {
+      document.documentElement.style.setProperty('--scrollbar-width', '12px'); // Larger scrollbar on scroll
+      clearTimeout(window.scrollTimeout);
+      window.scrollTimeout = setTimeout(() => {
+        document.documentElement.style.setProperty('--scrollbar-width', '8px'); // Smaller scrollbar after scrolling
+      }, 500); // Delay for resetting scrollbar size
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <About />
+      <Projects />
     </div>
   );
 }

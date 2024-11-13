@@ -1,0 +1,163 @@
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    background: none; /* Remove specific background */
+    color: white;
+  }
+
+  .about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: rgba(0, 255, 255, 0.3); /* Subtle cyan */
+  }
+  
+  
+  .about-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    align-items: center;
+    justify-content: space-between; /* Distributes image and text */
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+  }
+  
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem; /* Adjust for spacing */
+    max-width: 100%; /* Ensure the image container doesn’t overflow */
+    overflow: hidden; /* Prevent overflow issues */
+  }
+  
+  .about-image img {
+    width: 100%; /* Ensure the image fits within its container */
+    max-width: 350px; /* Constrain the image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the image nicely if it’s too large */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    border: 3px solid #00ffff; /* Cyan border to match theme */
+    animation: zoomIn 1.5s ease-out; /* Zoom-in animation */
+  }
+
+  .about-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5); /* Glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  }
+  
+  
+
+  /* Modern Heading Style */
+.section-title {
+    font-size: 3rem; /* Larger font size for modern look */
+    font-weight: 700; /* Bold weight */
+    text-transform: uppercase; /* All caps for boldness */
+    letter-spacing: 3px; /* Adds spacing for elegance */
+    color: transparent; /* Required for gradient text */
+    background: linear-gradient(90deg, #00ffff, #00e0e0); /* Gradient cyan */
+    -webkit-background-clip: text; /* Clips gradient to text */
+    background-clip: text; /* Standard property for non-WebKit browsers */
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Optional: Add Shadow for Depth */
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Line width under heading */
+    height: 4px; /* Line thickness */
+    background: #00ffff; /* Accent color */
+    border-radius: 4px; /* Rounded edges */
+  }
+  
+  
+  /* Add keyframes for the image */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8); /* Smaller size initially */
+      opacity: 0; /* Fully transparent */
+    }
+    to {
+      transform: scale(1); /* Original size */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  /* Add keyframes for sliding in */
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100px); /* Start outside the container */
+      opacity: 0; /* Fully transparent */
+    }
+    to {
+      transform: translateX(0); /* Original position */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  /* Apply the animation to the text */
+  .about-text {
+    max-width: 600px;
+    text-align: left;
+    animation: slideInFromRight 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother animation */
+    animation-delay: 0.5s; /* Starts after the image animation */
+  }
+  
+  
+ /* Modern Heading Style */
+.section-title {
+    font-size: 3rem; /* Larger font size for modern look */
+    font-weight: 700; /* Bold weight */
+    text-transform: uppercase; /* All caps for boldness */
+    letter-spacing: 3px; /* Adds spacing for elegance */
+    color: transparent; /* Required for gradient text */
+    background: linear-gradient(90deg, #00ffff, #00e0e0); /* Gradient cyan */
+    -webkit-background-clip: text; /* Clips gradient to text */
+    background-clip: text; /* Standard property for non-WebKit browsers */
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Optional: Add Shadow for Depth */
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Line width under heading */
+    height: 4px; /* Line thickness */
+    background: #00ffff; /* Accent color */
+    border-radius: 4px; /* Rounded edges */
+  }
+  
+  
+  .about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00ffff; /* Cyan text for the title */
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
